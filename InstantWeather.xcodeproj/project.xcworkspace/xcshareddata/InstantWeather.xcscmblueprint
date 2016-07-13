@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "41c3db10-d9ec-4e9d-b91b-9c064b0a7683++9853",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "41c3db10-d9ec-4e9d-b91b-9c064b0a7683++9853" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "41c3db10-d9ec-4e9d-b91b-9c064b0a7683++9853" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F706426D-746E-4FCE-A2CC-C4C32F19E5EF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "41c3db10-d9ec-4e9d-b91b-9c064b0a7683++9853" : "tgudela\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InstantWeather",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InstantWeather\/InstantWeather.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.cs.kent.edu\/courses\/cs49995\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "41c3db10-d9ec-4e9d-b91b-9c064b0a7683++9853"
+    }
+  ]
+}
