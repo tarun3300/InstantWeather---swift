@@ -212,15 +212,18 @@
 					8D32785F1CD3087F00996DF4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 64GZ424V9N;
+						LastSwiftMigration = 0800;
 					};
 					8D3278731CD3087F00996DF4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 64GZ424V9N;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8D32785F1CD3087F00996DF4;
 					};
 					8D32787E1CD3087F00996DF4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 64GZ424V9N;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8D32785F1CD3087F00996DF4;
 					};
 				};
@@ -432,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -443,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -454,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstantWeather.app/InstantWeather";
 			};
 			name = Debug;
@@ -466,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstantWeather.app/InstantWeather";
 			};
 			name = Release;
@@ -477,6 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = InstantWeather;
 			};
 			name = Debug;
@@ -488,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tgudela.InstantWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = InstantWeather;
 			};
 			name = Release;

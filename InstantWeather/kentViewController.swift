@@ -36,7 +36,7 @@ class kentViewController: UIViewController , WeatherDelegate1 {
     
     
     //ACTIONS
-    @IBAction func setCityButtonTapped(sender: AnyObject) {
+    @IBAction func setCityButtonTapped(_ sender: AnyObject) {
         print("setcityButtonTapped")
         self.weather.getWeather("kent")
         
@@ -48,7 +48,7 @@ class kentViewController: UIViewController , WeatherDelegate1 {
     
     
     // weather service Delegate
-    func setWeather(weatherStruct: WeatherStruct) {
+    func setWeather(_ weatherStruct: WeatherStruct) {
         print("set weather method")
         print("city:\(weatherStruct.cityName) temp:\(weatherStruct.temp) Description:\(weatherStruct.description) humid: \(weatherStruct.humidity) wind: \(weatherStruct.wind)  sunset: \(weatherStruct.sunset)")
         cityLabel.text = weatherStruct.cityName

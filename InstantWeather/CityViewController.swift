@@ -36,7 +36,7 @@ class CityViewController: UIViewController , WeatherDelegate1 {
     
     
     //ACTIONS
-    @IBAction func setCityButtonTapped(sender: AnyObject) {
+    @IBAction func setCityButtonTapped(_ sender: AnyObject) {
         print("setcityButtonTapped")
         openCityAlert()
         
@@ -50,11 +50,11 @@ class CityViewController: UIViewController , WeatherDelegate1 {
         //ALERT
         let alert = UIAlertController(title: "Zipcode",
                                       message: "Enter Zipcode",
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         //CANCELING AN ALERT
         
         let cancel = UIAlertAction(title: "Cancel",
-                                   style: UIAlertActionStyle.Cancel ,
+                                   style: UIAlertActionStyle.cancel ,
                                    handler: nil)
         
         alert.addAction(cancel)
@@ -62,7 +62,7 @@ class CityViewController: UIViewController , WeatherDelegate1 {
         
         //ACCEPTING AN ALERT
         let ok = UIAlertAction(title: "OK",
-                               style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+                               style: UIAlertActionStyle.default) { (action: UIAlertAction) in
                                 print("ok")
                                 
                                 let textFeild = alert.textFields?[0]
@@ -76,20 +76,20 @@ class CityViewController: UIViewController , WeatherDelegate1 {
         alert.addAction(ok)
         
         //TEXTFIELD FOR THE ALERT
-        alert.addTextFieldWithConfigurationHandler { (textFeild: UITextField) in
+        alert.addTextField { (textFeild: UITextField) in
             textFeild.placeholder = "City Name"
             
             
             //PRESENTING AN ALERT
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     
     
     // weather service Delegate
-    func setWeather(weatherStruct: WeatherStruct) {
+    func setWeather(_ weatherStruct: WeatherStruct) {
         print("set weather method")
         print("city:\(weatherStruct.cityName) temp:\(weatherStruct.temp) Description:\(weatherStruct.description) humid: \(weatherStruct.humidity) wind: \(weatherStruct.wind)  sunset: \(weatherStruct.sunset)")
         cityLabel.text = weatherStruct.cityName

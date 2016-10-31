@@ -11,7 +11,7 @@ import Foundation
 protocol WeatherDelegate1 {
     
     
-    func setWeather(weatherStruct: WeatherStruct)
+    func setWeather(_ weatherStruct: WeatherStruct)
     
     
 }
@@ -22,16 +22,16 @@ class Weather1{
     
     var delegate: WeatherDelegate1?
     
-    func getWeather(city: String){
+    func getWeather(_ city: String){
         // will get weather here
         
        // let cityEscaped = city.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         
         print("city name which we are collecting weather: \(city)")
         let path = "http://api.openweathermap.org/data/2.5/weather?zip=\(city),us&appid=b6bf2c36f1e9b411f4ae158c65205e38"
-        let url = NSURL(string: path)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+        let url = URL(string: path)
+        let session = URLSession.shared
+        let task = session.dataTask(with: url!, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) in
             ///print(data)
             
             let json = JSON(data: data!)
@@ -51,14 +51,14 @@ class Weather1{
             let weatherStruct = WeatherStruct(city: name!, temp: Int(Double(self.fixTempForDisplay(temp!))!), description: desc!, icon: icon!, sunset: sunset!, sunrise: sunrise!,  wind: wind!, humidity: humidity! )
             if self.delegate != nil {
                 
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     self.delegate?.setWeather(weatherStruct)
                 })
                 
             }
             
             print("lat:\(lat!) lon:\(lon!) temp: \(temp)")
-        }
+        } as! (Data?, URLResponse?, Error?) -> Void) 
         
         task.resume()
        
@@ -71,21 +71,21 @@ class Weather1{
        // }
         
     }
-    func cToF(tempC: Double) -> Double {
+    func cToF(_ tempC: Double) -> Double {
         return (tempC * 1.8) + 32
     }
     
-    func fToC(tempF: Double) -> Double {
+    func fToC(_ tempF: Double) -> Double {
         return (tempF - 32) / 1.8
     }
     
     
-    func kelvinToDegrees(tempK: Double) -> Double {
+    func kelvinToDegrees(_ tempK: Double) -> Double {
         return tempK - 272.15
     }
     
     
-    func fixTempForDisplay(temp: Double) -> String {
+    func fixTempForDisplay(_ temp: Double) -> String {
         print("Kelvin: \(temp)")
         print("C: \(temp - 273.15)")
         
